@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --clr-primary-cyan: hsl(179, 62%, 43%);
+  --clr-primary-bright-yellow: hsl(71, 73%, 54%);
+  --clr-neutral-light-gray: hsl(204, 43%, 93%);
+  --clr-neutral-grayish-blue: hsl(218, 22%, 67%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  background-color: var(--clr-neutral-light-gray);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin-block: 2rem;
+}
+
+.container {
+  padding: 1.4rem;
+  margin-inline: 1rem;
+  box-shadow: 1px 1px 7px 0px black;
+}
+
+.first-container {
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.first-container > * {
+  margin-bottom: 1rem;
+}
+
+.first-container {
+  color: var(--clr-neutral-grayish-blue);
+}
+
+.first-container h2 {
+  font-weight: 700;
+}
+
+.first-container p:nth-child(2) {
+  color: var(--clr-primary-bright-yellow);
+  font-weight: 700;
+  max-width: 30ch;
+}
+
+.second-container {
+  background-color: var(--clr-neutral-grayish-blue);
+  color: var(--clr-neutral-light-gray);
+  font-weight: 700;
+}
+
+.second-container > * {
+  margin-bottom: 1.2rem;
+}
+
+.second-container h2 {
+  font-size: 1.5rem;
+}
+
+.second-container .price p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.second-container .price-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.second-container .price-text {
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+.second-container p:nth-child(2) {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.second-container button {
+  color: var(--clr-neutral-light-gray);
+  background-color: var(--clr-primary-bright-yellow);
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 2px 3px 17px -9px black;
+}
+
+.second-container button:hover {
+  cursor: pointer;
+  color: var(--clr-primary-cyan);
+}
+
+.third-container {
+  background-color: var(--clr-primary-cyan);
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  color: var(--clr-neutral-light-gray);
+}
+
+.third-container h2 {
+  margin-bottom: 1rem;
+}
+
+.third-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 800px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1rem;
+    width: 800px;
+  }
+
+  main section:nth-child(2) {
+    display: flex;
+  }
+
+  main section:nth-child(2) > * {
+    flex: 1;
+  }
+
+  .container {
+    margin-inline: 0;
+    padding: 3rem 3rem;
+    box-shadow: 1px 1px 20px -13px black;
+  }
+
+  .first-container p:nth-child(2) {
+    max-width: 50ch;
+  }
+
+  .first-container p:nth-child(3) {
+    max-width: 60ch;
+  }
+
+  .second-container {
+    border-radius: 0rem 0rem 0rem 0.5rem;
+  }
+  .third-container {
+    border-radius: 0rem 0rem 0.5rem 0rem;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
